@@ -29,6 +29,7 @@ public class EventService {
 		Event entity = new Event();
 		entity.setName(dto.getName());
 		entity.setUrl(dto.getUrl());
+		entity.setDate(dto.getDate());
 		entity.setCity(new City(dto.getCityId(),null));		
 		entity = repository.save(entity);
 		return new EventDTO(entity);
